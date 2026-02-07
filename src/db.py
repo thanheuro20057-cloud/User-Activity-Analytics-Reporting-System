@@ -39,7 +39,17 @@ def init_db(conn: sqlite3.Connection) -> None:
             event_type TEXT NOT NULL,
             session_id TEXT
         );
+        
         """
+    conn.execute(
+        """
+            CREATE UNIQUE INDEX IF NOT EXISTS ux_events_natural
+            ON events (event_ts, user_id, feature, event_type, session_id);
+        """
+        
+    )
+
+        
     )
     conn.commit()
 
@@ -54,7 +64,7 @@ def insert_events(conn: sqlite3.Connection, rows: List[Tuple[str, str, str, str,
     """
     cursor = conn.cursor()
 
-    # The "?" symbols are placeholders (safer than building SQL text manually).
+    # Using parameterized query to prevent SQL injection and ensure proper data handling
     cursor.executemany(
         """
         INSERT INTO events (event_ts, user_id, feature, event_type, session_id)
