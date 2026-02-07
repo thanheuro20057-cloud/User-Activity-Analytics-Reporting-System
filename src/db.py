@@ -41,16 +41,17 @@ def init_db(conn: sqlite3.Connection) -> None:
         );
         
         """
+    );
     conn.execute(
         """
             CREATE UNIQUE INDEX IF NOT EXISTS ux_events_natural
             ON events (event_ts, user_id, feature, event_type, session_id);
         """
         
-    )
+    );
 
         
-    )
+    
     conn.commit()
 
 
