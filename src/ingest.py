@@ -1,3 +1,11 @@
+"""
+FILE          : ingest.py
+PROJECT       : User-Activity-Analytics-Reporting-System
+DESCRIPTION   :
+    This file contains functions to read and clean user activity CSV data.
+    - read_and_clean_csv: reads a CSV file, validates required columns, 
+    cleans data, and returns a cleaned DataFrame
+"""
 import pandas as pd
 
 REQUIRED_COLUMNS = {"event_ts", "user_id", "feature", "event_type", "session_id"}
