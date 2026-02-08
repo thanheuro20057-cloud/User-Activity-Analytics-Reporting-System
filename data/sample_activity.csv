@@ -1,0 +1,16 @@
+event_ts,user_id,feature,event_type,session_id
+2026-02-01 09:00:00,u001,login,click,s001
+2026-02-01 09:01:10,u001,dashboard,view,s001
+2026-02-01 09:02:20,u001,report,click,s001
+2026-02-01 10:11:00,u002,login,click,s002
+2026-02-01 10:12:00,u002,search,view,s002
+2026-02-02 08:30:00,u001,search,view,s003
+2026-02-02 08:31:00,u001,report,view,s003
+2026-02-02 11:00:00,u003,login,click,s004
+2026-02-02 11:05:00,u003,dashboard,view,s004
+2026-02-03 12:00:00,u002,report,click,s005
+2026-02-03 12:02:00,u002,report,view,s005
+2026-02-03 13:00:00,u004,login,click,s006
+not-a-date,u999,login,click,s999
+2026-02-04 10:00:00,,dashboard,view,s998
+2026-02-04 10:01:00,u888,,view,s997
