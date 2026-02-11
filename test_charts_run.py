@@ -1,6 +1,6 @@
 from pathlib import Path
-from src.db import connect_db
-from src.charts import generate_all_charts
+from Model.db import connect_db
+from View.charts import generate_all_charts
 
 def main() -> None:
     conn = connect_db("data/activity.db")

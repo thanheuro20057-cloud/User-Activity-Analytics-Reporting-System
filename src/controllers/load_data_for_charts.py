@@ -7,8 +7,8 @@ DESCRIPTION   :
     - Loads data from a CSV file into the 'events' table
 """
 
-from src.db import connect_db, init_db, insert_events
-from src.ingest import read_and_clean_csv
+from Model.db import connect_db, init_db, insert_events
+from Model.ingest import read_and_clean_csv
 
 
 def main() -> None:

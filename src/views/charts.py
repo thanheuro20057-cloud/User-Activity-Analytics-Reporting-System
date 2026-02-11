@@ -13,7 +13,7 @@ from typing import List, Tuple
 import matplotlib.pyplot as plt
 import sqlite3
 
-from src.analytics_sql import daily_active_users, events_per_day, top_features
+from Model.analytics_sql import daily_active_users, events_per_day, top_features
 
 
 def save_dau_chart(conn: sqlite3.Connection, output_path: Path) -> Path:

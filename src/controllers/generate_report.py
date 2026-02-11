@@ -11,10 +11,10 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-from src.db import connect_db
-from src.analytics_sql import daily_active_users, top_features, events_per_day
-from src.charts import generate_all_charts
-from src.report import build_pdf_report
+from Model.db import connect_db
+from Model.analytics_sql import daily_active_users, top_features, events_per_day
+from View.charts import generate_all_charts
+from View.report import build_pdf_report
 
 
 def main() -> None:
